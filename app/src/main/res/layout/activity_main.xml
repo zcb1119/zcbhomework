@@ -1,130 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:orientation="vertical"
+    android:padding="8dp">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:textSize="36sp"
+        android:gravity="end"
+        android:padding="16dp"
+        android:background="#e0e0e0"
+        android:text="0"/>
 
-        <!-- 标题 -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="我的账单"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="24dp"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:stretchColumns="*">
 
-        <!-- 饮食模块 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="16dp">
+        <TableRow>
+            <Button android:id="@+id/btn7" android:text="7"/>
+            <Button android:id="@+id/btn8" android:text="8"/>
+            <Button android:id="@+id/btn9" android:text="9"/>
+            <Button android:id="@+id/btnDivide" android:text="÷"/>
+        </TableRow>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="饮食消费"
-                android:textSize="18sp"/>
+        <TableRow>
+            <Button android:id="@+id/btn4" android:text="4"/>
+            <Button android:id="@+id/btn5" android:text="5"/>
+            <Button android:id="@+id/btn6" android:text="6"/>
+            <Button android:id="@+id/btnMultiply" android:text="×"/>
+        </TableRow>
 
-            <EditText
-                android:id="@+id/et_food"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:inputType="numberDecimal"
-                android:hint="请输入金额"
-                android:background="@drawable/edittext_border"/>
-        </LinearLayout>
+        <TableRow>
+            <Button android:id="@+id/btn1" android:text="1"/>
+            <Button android:id="@+id/btn2" android:text="2"/>
+            <Button android:id="@+id/btn3" android:text="3"/>
+            <Button android:id="@+id/btnSubtract" android:text="-"/>
+        </TableRow>
 
-        <!-- 交通模块 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="16dp">
+        <TableRow>
+            <Button android:id="@+id/btn0" android:text="0"/>
+            <Button android:id="@+id/btnDot" android:text="."/>
+            <Button android:id="@+id/btnEquals" android:text="="/>
+            <Button android:id="@+id/btnAdd" android:text="+"/>
+        </TableRow>
+    </TableLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="交通消费"
-                android:textSize="18sp"/>
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清除"
+        android:layout_marginTop="8dp"/>
 
-            <EditText
-                android:id="@+id/et_traffic"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:inputType="numberDecimal"
-                android:hint="请输入金额"
-                android:background="@drawable/edittext_border"/>
-        </LinearLayout>
-
-        <!-- 学习模块 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="学习消费"
-                android:textSize="18sp"/>
-
-            <EditText
-                android:id="@+id/et_study"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:inputType="numberDecimal"
-                android:hint="请输入金额"
-                android:background="@drawable/edittext_border"/>
-        </LinearLayout>
-
-        <!-- 其他模块 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="其他消费"
-                android:textSize="18sp"/>
-
-            <EditText
-                android:id="@+id/et_other"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:inputType="numberDecimal"
-                android:hint="请输入金额"
-                android:background="@drawable/edittext_border"/>
-        </LinearLayout>
-
-        <!-- 统计区域 -->
-        <Button
-            android:id="@+id/btn_calculate"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="立即统计"
-            android:layout_marginTop="24dp"
-            android:background="@android:color/holo_blue_dark"
-            android:textColor="#FFFFFF"/>
-
-        <TextView
-            android:id="@+id/tv_total"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="总金额：0.00"
-            android:textSize="22sp"
-            android:gravity="center"
-            android:background="#F5F5F5"
-            android:layout_marginTop="16dp"/>
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>
