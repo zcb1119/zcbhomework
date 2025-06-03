@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的账单"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- 饮食模块 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="饮食消费"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/et_food"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal"
+                android:hint="请输入金额"
+                android:background="@drawable/edittext_border"/>
+        </LinearLayout>
+
+        <!-- 交通模块 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交通消费"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/et_traffic"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal"
+                android:hint="请输入金额"
+                android:background="@drawable/edittext_border"/>
+        </LinearLayout>
+
+        <!-- 学习模块 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学习消费"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/et_study"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal"
+                android:hint="请输入金额"
+                android:background="@drawable/edittext_border"/>
+        </LinearLayout>
+
+        <!-- 其他模块 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="其他消费"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/et_other"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal"
+                android:hint="请输入金额"
+                android:background="@drawable/edittext_border"/>
+        </LinearLayout>
+
+        <!-- 统计区域 -->
+        <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="立即统计"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/holo_blue_dark"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="总金额：0.00"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:background="#F5F5F5"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>
